@@ -6,9 +6,7 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject instructionsPanel;
     public GameObject settingsPanel;
-    public GameObject profilePanel;
     public GameObject creditsPanel;
-    public GameObject quitPanel;
 
     void Start()
     {
@@ -24,9 +22,7 @@ public class UIManager : MonoBehaviour
         mainMenuPanel.SetActive(true);
         instructionsPanel.SetActive(false);
         settingsPanel.SetActive(false);
-        profilePanel.SetActive(false);
         creditsPanel.SetActive(false);
-        quitPanel.SetActive(false);
     }
 
     /// <summary>
@@ -35,18 +31,14 @@ public class UIManager : MonoBehaviour
 
     public void ShowInstructions() { TogglePanel(instructionsPanel); }
     public void ShowSettings() { TogglePanel(settingsPanel); }
-    public void ShowProfile() { TogglePanel(profilePanel); }
     public void ShowCredits() { TogglePanel(creditsPanel); }
-    public void ShowQuitPanel() { TogglePanel(quitPanel); }
 
     private void TogglePanel(GameObject panel)
     {
         mainMenuPanel.SetActive(false);
         instructionsPanel.SetActive(false);
         settingsPanel.SetActive(false);
-        profilePanel.SetActive(false);
         creditsPanel.SetActive(false);
-        quitPanel.SetActive(false);
 
         panel.SetActive(true);
     }

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 12073995}
   - component: {fileID: 12073998}
   - component: {fileID: 12073999}
+  - component: {fileID: 12074000}
   m_Layer: 0
   m_Name: RoomCamera
   m_TagString: MainCamera
@@ -280,6 +281,21 @@ MonoBehaviour:
   - {fileID: 1478192806}
   - {fileID: 1170989314}
   transitionDuration: 1.5
+  nextButton: {fileID: 1764308612}
+  previousButton: {fileID: 1391405974}
+--- !u!114 &12074000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12073994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfe24e1a64724d48b3e6c9b0fa7e728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 2
 --- !u!1 &48381091
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141784757}
   m_Layer: 0
-  m_Name: Room3_Pos
+  m_Name: Room3_Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298285029}
   m_Layer: 0
-  m_Name: Room1_Pos
+  m_Name: Room1_Emely bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313154899}
   m_Layer: 0
-  m_Name: 'Room2_Pos '
+  m_Name: Room2_Anna bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -763,6 +779,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4, y: 0.95421565, z: -6.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &523069531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 523069533}
+  - component: {fileID: 523069532}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &523069532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523069531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b7ba8ce42338041b92f7897365e6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &523069533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523069531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -814,16 +874,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: {fileID: 740446452}
   roomStories:
-  - '"Emely and Anna enter the living room, excited for their weekend plans. They
-    chat about school and upcoming projects."'
-  - '"In the kitchen, they try new recipes. Emely is experimenting with baking, while
-    Anna makes her favorite smoothie."'
   - '"After a long day, they relax in their cozy bedroom, chatting about life, dreams,
     and upcoming adventures."'
+  - This is Anna's bedroom.
   - '"The bathroom is their mini spa. They enjoy their skincare routines, sharing
-    beauty tips and self-care hacks."'
-  - '"In the playground, they unwind, play games, and talk about their childhood
-    memories."'
+    beauty tips and self-care hacks." '
+  - '"Emely and Anna enter the living room, excited for their weekend plans. They
+    chat about school and upcoming projects." '
+  - '"In the kitchen, they try new recipes. Emely is experimenting with baking, while
+    Anna makes her favorite smoothie."'
   - "\"Congratulations! You have followed Emely and Anna through their daily life.
     \U0001F389 Time to celebrate their journey!\""
 --- !u!1 &736662695
@@ -1101,7 +1160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913411216}
   m_Layer: 0
-  m_Name: Room4_Pos
+  m_Name: Room4_Living room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,7 +1276,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036192269}
-  - {fileID: 1736635455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1397,7 +1455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1170989314}
   m_Layer: 0
-  m_Name: Room6_Pos
+  m_Name: Outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1695,7 +1753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478192806}
   m_Layer: 0
-  m_Name: Room5_Pos
+  m_Name: Room5_Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1876,17 +1934,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736635454}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2099995099}
-  m_Father: {fileID: 951943612}
+  m_Father: {fileID: 2036192269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 56, y: 30}
   m_SizeDelta: {x: 90, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736635456
@@ -1944,7 +2002,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1736635458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 523069532}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1736635458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,6 +2353,7 @@ RectTransform:
   - {fileID: 1764308611}
   - {fileID: 1391405973}
   - {fileID: 2124945381}
+  - {fileID: 1736635455}
   m_Father: {fileID: 951943612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2644,3 +2715,4 @@ SceneRoots:
   - {fileID: 1170989314}
   - {fileID: 616632568}
   - {fileID: 48381093}
+  - {fileID: 523069533}
